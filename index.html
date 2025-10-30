@@ -5,7 +5,7 @@
   
 </head>
 <body class="container mt-5">
-  <h2>🚲 SmartRide Nkozi</h2>
+
   <form id="rideForm">
     <div class="mb-3">
       <label for="studentName" class="form-label">Student Name</label>
@@ -29,25 +29,7 @@
 
   <div id="matchResult" class="mt-4"></div>
 
-  <script>
-    const riders = [
-      { name: "John", location: "Main Gate", rating: 4.8 },
-      { name: "Sarah", location: "Library", rating: 4.5 },
-      { name: "Paul", location: "Hostel A", rating: 4.9 }
-    ];
 
-    document.getElementById("rideForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-      const pickup = document.getElementById("pickup").value;
-      const matchedRider = riders[Math.floor(Math.random() * riders.length)];
-      document.getElementById("matchResult").innerHTML = `
-        <h4>✅ Ride Confirmed!</h4>
-        <p>Rider: <strong>${matchedRider.name}</strong></p>
-        <p>Pickup Point: ${pickup}</p>
-        <p>Rating: ${matchedRider.rating}</p>
-      `;
-    });
-  </script>
 </body>
 </html>
 
